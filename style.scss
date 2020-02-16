@@ -12,6 +12,21 @@
     background-image: url(./img/banner.jpg);
     background-size: cover;
     margin-top: -100px;
+    //使用格線
+    display: grid;
+    //對齊內容:垂直對齊中間
+    align-items: center;
+}
+div{
+   width:800px;
+   margin: 0 auto;
+   text-align: center;
+   h1{
+       font-size: 72px;
+   } 
+   h2{
+       padding: 10px 0;
+   }
 }
 
 nav {
@@ -55,4 +70,29 @@ nav {
             transform: scaleX(-1.2) scaleY(1.2);
         }
     }
+}
+
+.content{
+    max-width: 1200px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+
+    *{
+        color: #333;
+    }
+
+    .pic{
+        //格線區域名稱:自行命名
+        grid-area: pic;
+    }
+    .text-area{
+        grid-area: text-area;
+    }
+}
+#content-1,#content-3{
+   grid-template-areas: 'pic text-area';
+}
+#content-2{
+    grid-template-areas: 'text-area pic';   
 }
